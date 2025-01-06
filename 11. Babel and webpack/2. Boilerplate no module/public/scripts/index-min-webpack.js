@@ -1,0 +1,1 @@
+(()=>{var n=new function n(o){!function(n,o){if(!(n instanceof o))throw new TypeError("Cannot call a class as a function")}(this,n),this.name=o}("sachin");console.log("My class is created with person name:",n.name),console.log("hello")})();

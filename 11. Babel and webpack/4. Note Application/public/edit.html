@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .head-div {
+            background-color: #2c6e97;
+            /* padding: 7px; */
+            color: #fff;
+            box-sizing: border-box;
+            display: flex;
+            width: 100%;
+        }
+
+        .center {
+            margin: auto;
+            width: 70%;
+            box-sizing: border-box;
+        }
+
+        .search-div {
+            background-color: #EEEEEE;
+            box-sizing: border-box;
+        }
+
+        .edit {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input[type="text"],
+        .search-by,
+        textarea {
+            border: 1.5px solid #2d302d46;
+            padding: 5px;
+            font-size: 1rem;
+            border-radius: 5px;
+            color: #12141298;
+            margin: 1%;
+            margin-left: 0%;
+            width: 100%;
+        }
+
+        input[type="text"]:hover,
+        .search-by:hover,
+        input[type="text"]:focus,
+        .search-by:focus,
+        textarea {
+            border: 1.5px solid #2d302d73;
+
+            /* remove default border on focus  */
+            outline: none;
+        }
+
+        .button-div {}
+
+        .button {
+            background-color: #2c6e97;
+            color: #fff;
+            border: none;
+            font-size: 1rem;
+            padding: 7px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px 1px #00070c;
+            width: 80px;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #2c6e97d3;
+        }
+
+        .button:active {
+            box-shadow: none;
+        }
+
+        .remove-note {
+            background-color: red;
+        }
+
+        .remove-note:hover {
+            background-color: rgba(255, 0, 0, 0.61);
+        }
+
+        a {
+            text-decoration: none;
+            color: #02436b;
+        }
+
+        a:hover {
+            color: #02436b91
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head-div">
+        <div class="center">
+            <h1 class="head-h1">Note App</h1>
+            <p class="head-p">Create notes and refresh learning...</p>
+        </div>
+    </div>
+    <div class="search-div">
+        <div class="center edit">
+            <p><a href="index.html">Home</a></p>
+            <p class="last-edit" style="color:#2c3236c9">Last edited </p>
+        </div>
+    </div>
+
+    <div>
+        <div class="center">
+            <input type="text" class="title" placeholder="Title">
+            <textarea name="" id="" cols="60" rows="10" class="description" placeholder="Description"></textarea>
+        </div>
+    </div>
+
+    <div class="button-div">
+        <div class="center">
+            <button class="button create-note">Save</button>
+            <button class="button remove-note">Remove</button>
+        </div>
+    </div>
+    <!-- <script src="./scripts/index-min.js"></script> -->
+    <script src="./scripts/edit-min-webpack.js"></script>
+</body>
+
+</html>

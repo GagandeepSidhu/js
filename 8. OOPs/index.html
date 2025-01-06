@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        let book = function ()
+        {
+            this.name = 'Physics'
+        }
+
+        console.log( book.hasOwnProperty( 'name' ) );   //true
+        console.log( book.hasOwnProperty( 'page' ) );   //false
+
+        console.log( book.hasOwnProperty( 'hasOwnProperty' ) ); //false
+        //Object is the parent of book and it has hasOwnProperty insede it's prototype object
+
+
+        let obj = Object();
+        console.log( obj ); // it does not has properties but has __proto__ object for prototype
+        console.log( obj.__proto__ );   //it includes many properties, hasOwnProperty is one of them
+
+        console.log( obj.__proto__.__proto__ ); // it is null 
+
+        // chanin to search a property
+        // user object -> user object prototype -> parent of user object -> prototype of parent of user object ->
+        // parent of parent of user object -> prototype of parent of parent of user object -> ..... -> .... ->
+        // Object (special js object ) -> prototype of Object (Object.__proto__) -> 
+        // Object.__proto__.__proto__ (it is null but we can set it)
+
+        // for functions: chain function -> function prototype -> Object.prototype -> null
+
+        Object.prototype.hasOwnProperty = function ()
+        {
+            return 'Object'
+        }
+
+        console.log( book.hasOwnProperty( 'name' ) );   // Object
+
+        // we can override it but it is not good practice
+
+        // we can add new properties as well
+        Object.prototype.getMyObject = function ()
+        {
+            return this
+        }
+
+        let obj2 = book.getMyObject();
+        console.log( obj2 );
+        // output
+        // ƒ()
+        //     {
+        //         this.name = 'Physics'
+        //     }
+
+
+        console.log( 'sachin'.__proto__ );
+        let myName = 'sahcin'
+        console.log( myName.slice( 0, -6 ) );
+
+    </script>
+</body>
+
+</html>

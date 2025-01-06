@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <input type="file" name="file" id="file">
+
+    <script>
+        document.getElementById( 'file' ).addEventListener( 'change', e =>
+        {
+            let file = e.target.files[0];
+            console.log( file );
+            let formData = new FormData();
+            formData.append( 'file', file )
+            console.log( formData );
+        }
+        )
+        function onchange( e )
+        {
+            // let file = e.targe.files[0]
+            console.log( 'file' );
+        }
+        function Upload()
+        {
+            // let file = e.targer.files[0];
+            console.log( 'hello' );
+        }
+    </script>
+
+    <!-- <script src="1. Http Request.js"></script> -->
+    <!-- <script src="2. Anothre API.js"></script> -->
+    <!-- <script src="6. Fetch API.js"></script> -->
+    <script src="7. Async Await.js"></script>
+</body>
+
+</html>
