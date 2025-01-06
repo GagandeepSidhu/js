@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="./index1.js"></script>
+    <!-- If we don't use any attribute (async or defer) then browser will follow below steps  -->
+    <!-- 
+        1. Do parsing of html untill it finds a script tag
+        2. After getting the script tag -> first it will get script file from netword and then
+            will execute script file.
+        3. In step 2, parsing of html will be stoped 
+        4. Now completion of step 2, it will continue the html parsing till the new script tag found 
+        5. Repet the same steps  
+    -->
+
+    <script src="./index2.js" async></script>
+    <!-- async attribute: when we use async then browser will load script file concurrently while parsing html,
+        after getting the script file then browser will stop parsing html and will execute script,
+        when script execution finish then browser will continue for the parsing of remaining html  -->
+
+    <script src="./index3.js" defer></script>
+    <!-- defer attribute: when we use defer then browser will load script file concurrently while parsing html,
+        and finish the parsing of html then it will execute the script but while parsing the html it will only 
+        get the script from netword but will not execute it. Execution of script only happens when parsing of 
+        html finishes. -->
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            min-width: 100px;
+            min-height: 100px;
+            padding: 50px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1. Bubbling</h1>
+    <div id="Bgrandparent">
+        GrandParent
+        <div id="Bparent">
+            Parent
+            <div id="Bchild">
+                Child
+            </div>
+        </div>
+    </div>
+
+
+    <h1>2. Capturing</h1>
+    <div id="Cgrandparent">
+        GrandParent
+        <div id="Cparent">
+            Parent
+            <div id="Cchild">
+                Child
+            </div>
+        </div>
+    </div>
+
+    <h1>3. Mixing of Bubbling and capturing</h1>
+    <div id="Mgrandparent">
+        GrandParent - Caprure
+        <div id="Mparent">
+            Parent - Bubble
+            <div id="Mchild">
+                Child - Capture
+            </div>
+        </div>
+    </div>
+
+    <h1>4. stopPropogation()</h1>
+    <div id="SPgrandparent">
+        GrandParent
+        <div id="SPparent">
+            Parent - Stop
+            <div id="SPchild">
+                Child
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./Event bubbling, capturing.js"></script>
+</body>
+
+</html>

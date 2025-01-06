@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            min-width: 100px;
+            min-height: 100px;
+            padding: 50px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Event Delegation</h1>
+
+    <h2>Example 1</h2>
+    <div id="parent">
+        <ul id="category">
+            <li id="laptops">laptops</li>
+            <li id="cameras">cameras</li>
+            <li id="shooes">shooes</li>
+        </ul>
+    </div>
+
+    <h2>Example 2</h2>
+    <div id="form">
+        <!-- we can give our own attributes inside a html element -->
+        <!-- here sk-data is the attribute that we can define by our own -->
+        <input type="text" name="" id="name" class="uppercase name">
+        <input type="text" name="" id="pen" class="uppercase pen">
+        <input type="text" name="" id="mobile">
+    </div>
+    <script src="./prototype.js"></script>
+</body>
+
+</html>
